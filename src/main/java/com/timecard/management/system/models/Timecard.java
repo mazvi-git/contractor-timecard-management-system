@@ -22,7 +22,7 @@ public class Timecard {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "site_id", referencedColumnName = "site_id")
-    private Site siteCode;
+    private Site site;
 
     @ManyToOne
     @JoinColumn(name = "machine_id")
@@ -43,7 +43,7 @@ public class Timecard {
         this.id = id;
         this.submissionDate = submissionDate;
         this.status = status;
-        this.siteCode = siteCode;
+        this.site = site;
         this.machine = machine;
         this.contractor = contractor;
         this.approvedBy = approvedBy;
@@ -55,7 +55,7 @@ public class Timecard {
                 "id=" + id +
                 ", submissionDate=" + submissionDate +
                 ", status='" + status + '\'' +
-                ", siteCode='" + siteCode + '\'' +
+                ", siteCode='" + site + '\'' +
                 ", machineName='" + machine+ '\'' +
                 ", contractorName='" + contractor + '\'' +
                 ", approvedBy='" + approvedBy + '\'' +
