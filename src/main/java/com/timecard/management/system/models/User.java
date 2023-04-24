@@ -26,6 +26,6 @@ public class User {
     private String password;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "role_id", referencedColumnName = "role_id")
+    @JoinColumn(name = "role_id")
     private Role role;
 }

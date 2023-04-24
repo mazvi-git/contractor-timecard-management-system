@@ -21,7 +21,7 @@ public class Timecard {
     private String status;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "site_id", referencedColumnName = "site_id")
+    @JoinColumn(name = "site_id")
     private Site site;
 
     @ManyToOne
@@ -33,7 +33,7 @@ public class Timecard {
     private User contractor;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "userName")
     private User approvedBy;
 
     public Timecard() {

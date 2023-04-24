@@ -11,18 +11,34 @@ import javax.persistence.*;
 public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="job_id")
-    private Long id;
+    @Column(name = "job_id")
+    private Long job_idd;
 
-    @Column(name="jobName")
+    @Column(name = "jobName")
     private String jobName;
 
-    @Column(name="desription")
+    @Column(name = "desription")
     private String description;
 
-    @Column(name="hourlyRate")
+    @Column(name = "hourlyRate")
     private double hourlyRate;
 
-    @Column(name="maxHoursPerDay")
+    @Column(name = "maxHoursPerDay")
     private int maxHoursPerDay;
+
+
+    public Job() {
+
+    }
+
+
+	public Job(String jobName, String description, double hourlyRate, int maxHoursPerDay) {
+		this.jobName = jobName;
+		this.description = description;
+		this.hourlyRate = hourlyRate;
+		this.maxHoursPerDay = maxHoursPerDay;
+	}
+
 }
+
+

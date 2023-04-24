@@ -1,4 +1,7 @@
-package data.transfer.objects;
+package com.timecard.management.system.dto;
 
-interface UserRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.timecard.management.system.models.User;
+
+interface UserRepo extends JpaRepository<User, Long> {
 }
